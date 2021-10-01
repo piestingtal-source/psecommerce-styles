@@ -1,6 +1,12 @@
 /*
-PSeCommerce Style: N3rdStyle
+PSeCommerce Style: PSource-Style
 */
+
+
+/**
+PSource-Style Beta v0.1
+Autor: DerN3rd, Die N3rd
+Verwendet in unserem Shop: 
 .mp_form_content>h2{
 	font-size:30px
 }
@@ -100,16 +106,7 @@ div.mp_select2.mp_form_input_error ~ label.error,div.mp_select2_search.mp_form_i
 	color:#c0392b;
 	font-size:14px
 }
-a.mp_button,.mp_orders_invoice a.button,button.mp_button{
-	background:transparent;
-	border:2px solid #333;
-	border-radius: 5px;
-	color:#333;
-	font-size:16px;
-	font-weight:700;
-	line-height:1.5em;
-	box-shadow: 2px 2px 4px #888;
-}
+
 a.mp_button:hover,.mp_orders_invoice a.button:hover,a.mp_button:focus,.mp_orders_invoice a.button:focus,button.mp_button:hover,button.mp_button:focus{
 	background-color:rgba(51, 51, 51, 0.75);
 	color:#fff;
@@ -175,28 +172,91 @@ a.mp_button-widget-cart,button.mp_button-widget-cart{
 	border-top-color:#ddd;
 	border-bottom-color:#ddd
 }
-.mp_mini_cart_item-content{font-size:12px}.mp_mini_cart_item-title{font-size:12px}.mp_mini_cart_item-attribute{color:#666}.mp_mini_cart_item-attribute>strong{color:#333}.mp_mini_cart_item-attribute .mp_product_price{color:#333;font-size:12px;line-height:20px;margin:0}a.mp_button-mini-cart{display:inline-block;font-size:14px;padding:5px 10px}#mp-create-account-form .mp_form_input ~ label{display:block;font-size:14px}#mp-create-account-form .mp_form_input ~ label.error{color:#c0392b}h1.mp_title,h2.mp_title,h3.mp_title,h4.mp_title{font-size:30px;line-height:1.5em}h1.mp_sub_title,h2.mp_sub_title,h3.mp_sub_title,h4.mp_sub_title{font-size:22px;line-height:1.5em}.mp_product_img_link{position:relative}.mp_product_img_link:before,.mp_product_img_link:after{bottom:0;content:"";left:0;right:0;opacity:0;pointer-events:none;position:absolute;-webkit-transition:opacity .4s;transition:opacity .4s;top:0}.mp_product_img_link:before{background-color:#333}.mp_product_img_link:after{color:#fff;content:"\f103";font-family:'dashicons';font-size:42px;margin-top:-21px;pointer-events:none;text-align:center;top:50%}@media only screen and (min-width: 992px){.mp_product_img_link:after{font-size:20px;margin-top:-10px}}.mp_product_img_link:hover:before{opacity:0.6}.mp_product_img_link:hover:after{opacity:1}.mp_product .mp_product_name{font-size:30px;line-height:1.5em}@media only screen and (min-width: 992px){.mp_product .mp_product_name{font-size:26px}}.mp_product .mp_product_name a{color:#333}.mp_product .mp_product_name a:hover,.mp_product .mp_product_name a:focus{color:#666}.mp_product_price{font-size:22px;line-height:1.5em}@media only screen and (min-width: 992px){.mp_product_price{font-size:20px}}
-.mp_product_price-normal,.mp_product_price-sale,.mp_product_price-extended{
-	font-weight:700;
-	text-decoration: underline;
-	text-shadow: 1px 1px 2px #164666;
+.mp_mini_cart_item-content{
+	font-size:12px
 }
-.mp_product_price-sale ~ .mp_product_price-normal{
-	color:#c0392b;
-	font-size:18px;
-	font-weight:400;
-	text-decoration: line-through;
+.mp_mini_cart_item-title{
+	font-size:12px
 }
+.mp_mini_cart_item-attribute{
+	color:#666
+}
+.mp_mini_cart_item-attribute>strong{
+	color:#333
+}
+.mp_mini_cart_item-attribute .mp_product_price{
+	color:#333;
+	font-size:12px;
+	line-height:20px;
+	margin:0
+}
+a.mp_button-mini-cart{
+	display:inline-block;
+	font-size:14px;
+	padding:5px 10px
+}
+#mp-create-account-form .mp_form_input ~ label{
+	display:block;
+	font-size:14px
+}
+#mp-create-account-form .mp_form_input ~ label.error{
+	color:#c0392b
+}
+h1.mp_title,h2.mp_title,h3.mp_title,h4.mp_title{
+	font-size:30px;
+	line-height:1.5em
+}
+h1.mp_sub_title,h2.mp_sub_title,h3.mp_sub_title,h4.mp_sub_title{
+	font-size:22px;
+	line-height:1.5em
+}
+.mp_product_img_link{
+	position:relative
+}
+.mp_product_img_link:before,.mp_product_img_link:after{
+	bottom:0;
+	content:"";
+	left:0;
+	right:0;
+	opacity:0;
+	pointer-events:none;
+	position:absolute;
+	-webkit-transition:opacity .4s;
+	transition:opacity .4s;
+	top:0
+}
+.mp_product_img_link:before{
+	background-color:#333
+}
+.mp_product_img_link:after{
+	color:#fff;
+	content:"\f103";
+	font-family:'dashicons';
+	font-size:42px;
+	margin-top:-21px;
+	pointer-events:none;
+	text-align:center;
+	top:50%
+}
+@media only screen and (min-width: 992px){
+	.mp_product_img_link:after{
+		font-size:20px;
+		margin-top:-10px
+	}
+}
+.mp_product_img_link:hover:before{
+	opacity:0.6
+}
+.mp_product_img_link:hover:after{
+	opacity:1
+}
+
 .mp_savings_amt {
 	color: green;
     font-size: 1.2em;
     font-weight: 700;
 }
-@media only screen and (min-width: 992px){
-	.mp_product_price-sale ~ .mp_product_price-normal{
-		font-size:16px
-	}
-}
+
 .mp_products .mp_product_meta {
     height: fit-content !important;
 }
@@ -309,4 +369,138 @@ a.mp_button-widget-cart,button.mp_button-widget-cart{
 }
 .mp_cart_widget .mp_mini_cart_item-title{
 	font-size:14px
+}
+/* Produkt-Titel */
+
+.mp_product .mp_product_name {
+    font-size: 30px;
+    line-height: 1.5em;
+    text-align: center;
+    color: darkslategray;
+}
+
+@media only screen and (min-width: 992px) {
+    .mp_product .mp_product_name {
+        font-size: 26px
+    }
+}
+
+.mp_product .mp_product_name a {
+    color: #333
+}
+
+.mp_product .mp_product_name a:hover,
+.mp_product .mp_product_name a:focus {
+    color: #666
+}
+
+
+/* Einzelprodukt - Frontend */
+
+
+/* Produkt-Auszug */
+
+.mp_product_excerpt {
+    display: block;
+    background: #2f4f4fcf;
+    color: lightgray;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+    .mp_product_excerpt p {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
+
+.mp_product_excerpt:hover {
+    zoom: 1.5;
+    background-color: lightgray;
+    color: darkslategray;
+    box-shadow: 2px 2px 4px darkslategrey;
+    font-size: 1.5em;
+    line-height: 0.8em;
+}
+
+
+/* Kategorie - Infoanhang */
+
+.mp_single_product_details {
+    display: block;
+    width: 100%;
+    border: 1px solid darkgray;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* Kaufen/Download/Buttons-Schaltfläche*/
+
+a.mp_button,
+.mp_orders_invoice a.button,
+button.mp_button {
+    display: inline-block;
+    background: #d3d3d38a;
+    border: 2px solid darkslategrey;
+    border-radius: 5px;
+    color: darkslategray;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.5em;
+    box-shadow: 2px 2px 4px #888;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px;
+    position: relative;
+    min-width: 240px;
+}
+
+
+/* Kaufen/Download/Buttons-Schaltfläche HOVER */
+
+a.mp_button:hover,
+.mp_orders_invoice a.button:hover,
+a.mp_button:focus,
+.mp_orders_invoice a.button:focus,
+button.mp_button:hover,
+button.mp_button:focus {
+    background-color: #2f4f4fb8;
+    color: lightgray;
+    box-shadow: 6px 2px 4px #666;
+}
+
+
+/* Produktpreis */
+
+.mp_product_price {
+    font-size: 22px;
+    line-height: 1.5em
+}
+
+@media only screen and (min-width: 992px) {
+    .mp_product_price {
+        font-size: 20px
+    }
+}
+
+.mp_product_price-normal,
+.mp_product_price-sale,
+.mp_product_price-extended {
+    font-weight: 700;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px grey;
+}
+
+.mp_product_price-sale~.mp_product_price-normal {
+    color: #c0392b;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+@media only screen and (min-width: 992px) {
+    .mp_product_price-sale~.mp_product_price-normal {
+        font-size: 16px
+    }
 }
