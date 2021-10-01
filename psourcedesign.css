@@ -306,74 +306,6 @@ button.mp_button-widget-cart {
     color: #fff
 }
 
-.mp_mini_cart_ribbon {
-    background: rgba(51, 51, 51, 0.650);
-    color: #fff;
-    font-size: 14px
-}
-
-.mp_mini_cart_ribbon:before {
-    color: #fff;
-    font-size: 20px;
-    height: 20px;
-    line-height: 20px;
-    width: 20px
-}
-
-.mp_mini_cart_content {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-right: none;
-    font-size: 14px
-}
-
-.mp_mini_cart_items {
-    margin-bottom: 10px
-}
-
-.mp_mini_cart_item-link {
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    -webkit-transition: all .4s;
-    transition: all .4s
-}
-
-.mp_mini_cart_item-link:hover,
-.mp_mini_cart_item-link:focus {
-    border-top-color: #ddd;
-    border-bottom-color: #ddd
-}
-
-.mp_mini_cart_item-content {
-    font-size: 12px
-}
-
-.mp_mini_cart_item-title {
-    font-size: 12px
-}
-
-.mp_mini_cart_item-attribute {
-    color: #666
-}
-
-.mp_mini_cart_item-attribute>strong {
-    color: #333
-}
-
-.mp_mini_cart_item-attribute .mp_product_price {
-    color: #333;
-    font-size: 12px;
-    line-height: 20px;
-    margin: 0
-}
-
-a.mp_button-mini-cart {
-    display: inline-block;
-    font-size: 14px;
-    padding: 5px 10px
-}
-
 #mp-create-account-form .mp_form_input~label {
     display: block;
     font-size: 14px
@@ -481,11 +413,11 @@ h4.mp_sub_title {
 }
 
 .mp_products_items {
-    border-bottom-color: #eee
+    border-radius: 5px;
 }
 
 .mp_products .mp_product_item {
-    border-top-color: #eee
+    border-top-color: #fff;
 }
 
 @media only screen and (min-width: 992px) {
@@ -522,46 +454,6 @@ h4.mp_sub_title {
 
 .mp_product_options_att_label {
     font-size: 18px
-}
-
-.mp_product .mp_product_tab_label {
-    float: left;
-    margin: 0 5px 0 0;
-    box-shadow: 2px 2px 4px #555;
-}
-
-.mp_product_tab_label a {
-    background: #333;
-    color: #fff;
-    font-size: 18px;
-    opacity: 0.5;
-    -webkit-transition: opacity .4s;
-    transition: opacity .4s;
-    border-radius: 5px 5px 0 0;
-}
-
-.mp_product_tab_label a:focus {
-    outline: 0
-}
-
-.mp_product_tab_label.current a {
-    opacity: 1
-}
-
-.mp_product_tab_content>p {
-    font-size: 16px
-}
-
-.mp_product_tab_content>p:last-child {
-    margin-bottom: 0
-}
-
-.mp_product_tab_content_text {
-    font-size: 16px
-}
-
-.mp_product_tab_content_text p:last-child {
-    margin-bottom: 0
 }
 
 .mp_cart_empty {
@@ -979,7 +871,9 @@ h4.mp_sub_title {
 }
 
 .mp_product .mp_product_name a {
-    color: #333
+    color: darkslategray;
+    font-weight: 700;
+    border-bottom: 1px dashed lightslategrey;
 }
 
 .mp_product .mp_product_name a:hover,
@@ -1016,8 +910,8 @@ h4.mp_sub_title {
 
 .mp_product_excerpt {
     display: block;
-    background: #2f4f4fcf;
-    color: lightgray;
+    background: #2f4f4f26;
+    color: darkslategray;
     border-radius: 5px;
 }
 
@@ -1038,7 +932,7 @@ h4.mp_sub_title {
     color: darkslategray;
     box-shadow: 2px 2px 4px darkslategrey;
     font-size: 1.1em;
-    line-height: 0.8em;
+    line-height: 1.0em;
 }
 
 
@@ -1055,6 +949,10 @@ h4.mp_sub_title {
 
 /* Kaufen/Download/Buttons-Schaltfläche*/
 
+a.mp_button {
+    position: relative;
+}
+
 a.mp_button,
 .mp_orders_invoice a.button,
 button.mp_button {
@@ -1070,8 +968,8 @@ button.mp_button {
     left: 50%;
     transform: translateX(-50%);
     max-width: 350px;
-    position: absolute;
     min-width: 240px;
+    justify-content: center;
 }
 
 
@@ -1091,9 +989,22 @@ button.mp_button:focus {
 
 /* Produktpreis */
 
+.mp_product_callout {
+    margin: 15px 0;
+    position: relative;
+    display: inline-block;
+}
+
 .mp_product_price {
+    display: block;
     font-size: 22px;
-    line-height: 1.5em
+    line-height: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px;
+    min-width: 240px;
+    justify-content: center;
+    position: relative;
 }
 
 @media only screen and (min-width: 992px) {
@@ -1136,4 +1047,150 @@ button.mp_button:focus {
         font-size: 16px;
         padding: 5px;
     }
+}
+
+
+/* Bildslider Produktbilder */
+
+.mp_product_gallery.lightSlider img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* Hier beginnt der schwebende Warenkorb */
+
+.mp_mini_cart_ribbon {
+    background: rgba(51, 51, 51, 0.650);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 25px;
+}
+
+.mp_mini_cart_ribbon:hover {
+    background: rgba(51, 51, 51, 0.650);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 25px 0 0 0;
+}
+
+.mp_mini_cart_ribbon:active {
+    background: rgba(51, 51, 51, 0.650);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 25px 0 0 0;
+}
+
+.mp_mini_cart_ribbon:before {
+    color: #fff;
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    width: 20px
+}
+
+.mp_mini_cart_content {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-right: none;
+    font-size: 14px
+}
+
+.mp_mini_cart_items {
+    margin-bottom: 10px
+}
+
+.mp_mini_cart_item-link {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: all .4s;
+    transition: all .4s
+}
+
+.mp_mini_cart_item-link:hover,
+.mp_mini_cart_item-link:focus {
+    border-top-color: #ddd;
+    border-bottom-color: #ddd;
+    border-radius: 25px 0 0 0;
+}
+
+.mp_mini_cart_item-content {
+    font-size: 12px
+}
+
+.mp_mini_cart_item-title {
+    font-size: 12px
+}
+
+.mp_mini_cart_item-attribute {
+    color: #666
+}
+
+.mp_mini_cart_item-attribute>strong {
+    color: #333
+}
+
+.mp_mini_cart_item-attribute .mp_product_price {
+    color: #333;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0
+}
+
+a.mp_button-mini-cart {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px
+}
+
+
+/* Produkt-Tabs - Beschreibung/Empfohlene Produkte */
+
+.mp_product .mp_product_tab_label {
+    float: left;
+    margin: 0 5px 0 0;
+    box-shadow: 2px 2px 4px #555;
+}
+
+.mp_product_tab_label a {
+    background: darkslategray;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.5;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+    border-radius: 5px 5px 0 0;
+}
+
+.mp_product_tab_label a:hover {
+    outline: 0;
+    color: #38c2bb;
+}
+
+.mp_product_tab_label a:focus {
+    outline: 0;
+    color: #38c2bb;
+}
+
+.mp_product_tab_label.current a {
+    opacity: 1
+}
+
+.mp_product_tab_content>p {
+    font-size: 16px
+}
+
+.mp_product_tab_content>p:last-child {
+    margin-bottom: 0
+}
+
+.mp_product_tab_content_text {
+    font-size: 16px
+}
+
+.mp_product_tab_content_text p:last-child {
+    margin-bottom: 0
 }
