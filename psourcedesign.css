@@ -1,5 +1,5 @@
 /*
-PSeCommerce Style: PSource-Style
+PSeCommerce Style: PSource-Style v.0.1 Beta
 */
 
 
@@ -455,12 +455,12 @@ h4.mp_sub_title {
 .mp_product_options_att_label {
     font-size: 18px
 }
-
+/* Meldung leerer Warenkorb */
 .mp_cart_empty {
-    background: #6ab0de;
-    border: 2px solid #2980b9;
-    color: #164666;
-    padding: 15px
+    background: #d52210;
+    border: 2px solid #38c2bb;
+    color: #38c2bb;
+    padding: 15px;
 }
 
 .mp_cart_empty_message {
@@ -808,54 +808,7 @@ h4.mp_sub_title {
     font-size: 14px
 }
 
-.mp_widget_cart .mp_mini_cart_item-link {
-    border-color: #ddd
-}
 
-.mp_widget_cart .mp_mini_cart_item:nth-child(even) .mp_mini_cart_item-link {
-    background: #eee
-}
-
-.mp_widget_cart .mp_mini_cart_item:nth-child(odd) .mp_mini_cart_item-link {
-    background: #f3f3f3
-}
-
-.mp_widget_cart .mp_mini_cart_item:last-child .mp_mini_cart_item-link {
-    border-bottom-color: #ddd
-}
-
-.mp_widget_cart .mp_mini_cart_item-title {
-    font-size: 14px
-}
-
-.mp_cart_widget .mp_mini_cart_item {
-    margin-top: 0
-}
-
-.mp_cart_widget .mp_mini_cart_item-link {
-    border: 1px solid #ddd;
-    border-bottom-color: transparent
-}
-
-.mp_cart_widget .mp_mini_cart_item-link:hover {
-    border-bottom: 1px solid #ddd
-}
-
-.mp_cart_widget .mp_mini_cart_item:nth-child(even) .mp_mini_cart_item-link {
-    background: #eee
-}
-
-.mp_cart_widget .mp_mini_cart_item:nth-child(odd) .mp_mini_cart_item-link {
-    background: #f3f3f3
-}
-
-.mp_cart_widget .mp_mini_cart_item:last-child .mp_mini_cart_item-link {
-    border-bottom-color: #ddd
-}
-
-.mp_cart_widget .mp_mini_cart_item-title {
-    font-size: 14px
-}
 
 
 /* Produkt-Titel */
@@ -1062,6 +1015,14 @@ button.mp_button:focus {
 
 /* Hier beginnt der schwebende Warenkorb */
 
+.mp_mini_cart {
+    max-width: 250px;
+    position: fixed;
+    right: 0;
+    top: 15%;
+    z-index: 500;
+}
+
 .mp_mini_cart_ribbon {
     background: rgba(51, 51, 51, 0.650);
     color: #fff;
@@ -1091,11 +1052,19 @@ button.mp_button:focus {
 }
 
 .mp_mini_cart_ribbon:before {
-    color: #fff;
+    content: "\f174";
+    display: block;
+    font-family: 'dashicons';
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    left: 5px;
+    color: #38c2bb;
     font-size: 20px;
     height: 20px;
     line-height: 20px;
-    width: 20px
+    width: 20px;
 }
 
 .mp_mini_cart_content {
@@ -1152,7 +1121,6 @@ a.mp_button-mini-cart {
     font-size: 14px;
     padding: 5px 10px
 }
-
 
 /* Produkt-Tabs - Beschreibung/Empfohlene Produkte */
 

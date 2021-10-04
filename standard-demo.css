@@ -617,7 +617,7 @@ h4.mp_sub_title {
 .mp_product_tab_content_text p:last-child {
     margin-bottom: 0
 }
-
+/* Meldung leerer Warenkorb */
 .mp_cart_empty {
     background: #6ab0de;
     border: 2px solid #2980b9;
