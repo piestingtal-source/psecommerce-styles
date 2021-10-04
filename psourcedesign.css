@@ -479,7 +479,7 @@ h4.mp_sub_title {
 }
 
 .mp_cart_item {
-    border-color: #ddd
+    border-color: #38c2bb;
 }
 
 .mp_cart_item:nth-child(even) {
@@ -487,11 +487,11 @@ h4.mp_sub_title {
 }
 
 .mp_cart_item:nth-child(odd) {
-    background: #f3f3f3
+    background: #5897fb2e
 }
 
 .mp_cart_item:last-child {
-    border-bottom-color: #ddd
+    border-bottom-color: #38c2bb;
 }
 
 .mp_cart_item_content h2.mp_cart_item_title,
@@ -521,12 +521,13 @@ h4.mp_sub_title {
 .mp_cart_item_content .mp_cart_item_remove_item {
     font-size: 12px
 }
-
+/* Gutscheinformular Kasse */
 .mp_coupon_form {
-    background: #eee;
-    border: 1px solid #ddd;
+    background: #5897fb2e;
+    border: 1px dashed #38c2bb;
     overflow: hidden;
-    padding: 15px
+    padding: 15px;
+    color: #38c2bb;
 }
 
 .mp_coupon_form p {
@@ -545,22 +546,24 @@ h4.mp_sub_title {
 .mp_cart_meta .mp_button-continue-shopping:focus {
     border-bottom: 2px solid #333
 }
-
+/* Kasse Preis Zusammenfassung */
 .mp_cart_resume {
-    border-color: #ddd
+    border-color: #38c2bb;
+    box-shadow: #333 2px 2px 5px;
 }
 
 .mp_cart_resume_head {
-    background-color: #333
+    background-color: #38c2bb
 }
 
 .mp_cart_resume_head .mp_sub_title {
     color: #fff;
-    font-weight: 700
+    font-weight: 700;
+    
 }
 
 .mp_cart_resume_item {
-    font-size: 16px
+    font-size: 16px;
 }
 
 .mp_cart_resume_item-coupons .mp_cart_resume_item_amount-total {
@@ -581,7 +584,7 @@ h4.mp_sub_title {
 }
 
 .mp_cart_resume_item-order-total {
-    border-top-color: #ddd;
+    border-top-color: #38c2bb;
     font-size: 20px
 }
 
@@ -958,10 +961,10 @@ a.mp_button,
 .mp_orders_invoice a.button,
 button.mp_button {
     display: inline-block;
-    background: #d3d3d38a;
-    border: 2px solid darkslategrey;
+    background: #5897fb2e;
+    border: 2px solid #38c2bb;
     border-radius: 5px;
-    color: darkslategray;
+    color: #38c2bb;
     font-size: 1.2em;
     font-weight: 700;
     line-height: 1.5em;
