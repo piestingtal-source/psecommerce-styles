@@ -827,14 +827,14 @@ h4.mp_sub_title {
 }
 
 .mp_product .mp_product_name a {
-    color: darkslategray;
+    color: #217a73;
     font-weight: 700;
-    border-bottom: 1px dashed lightslategrey;
+    border-bottom: 1px dashed #38c2bb;
 }
 
-.mp_product .mp_product_name a:hover,
-.mp_product .mp_product_name a:focus {
-    color: #666
+.mp_product .mp_product_name a:hover, .mp_product .mp_product_name a:focus {
+    color: #38c2bb;
+    text-shadow: 1px 1px 2px #38c2bb;
 }
 
 
@@ -865,10 +865,11 @@ h4.mp_sub_title {
 /* Produkt-Auszug */
 
 .mp_product_excerpt {
-    display: block;
-    background: #2f4f4f26;
-    color: darkslategray;
+    display: inline-block;
+    background: #38c2bb;
+    color: #fff;
     border-radius: 5px;
+    border:1px solid grey;
 }
 
 .mp_product_excerpt p {
@@ -883,14 +884,38 @@ h4.mp_sub_title {
 }
 
 .mp_product_excerpt:hover {
-    zoom: 1.5;
-    background-color: lightgray;
-    color: darkslategray;
+    zoom: 1.2;
+    background-color: #f7f7f7;
+    color: #38c2bb;
     box-shadow: 2px 2px 4px darkslategrey;
     font-size: 1.1em;
     line-height: 1.0em;
 }
 
+a.mp_product_more_link:before {
+    content: "\f00e";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 18px;
+}
+
+a.mp_product_more_link {
+    border: 1px solid #fff;
+    margin-top: 4px;
+    display: inline-block;
+    padding: 3px;
+    color: #38c2bb;
+    background: #fff;
+    border-radius: 5px;
+}
+
+a.mp_product_more_link:hover {
+    color: #fff;
+    background: #38c2bb;
+    border-radius: 5px;
+}
 
 /* Kategorie - Infoanhang */
 
@@ -910,35 +935,28 @@ button.mp_button {
     position: relative;
 }
 
-a.mp_button,
-.mp_orders_invoice a.button,
-button.mp_button {
+a.mp_button, .mp_orders_invoice a.button, button.mp_button {
     display: inline-block;
-    background: #5897fb2e;
+    background: #fff;
     border: 2px solid #38c2bb;
     border-radius: 5px;
     color: #38c2bb;
     font-size: 1.2em;
     font-weight: 700;
     line-height: 1.5em;
-    box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #38c2bb;
     max-width: 350px;
     min-width: 240px;
-    justify-content: center;
 }
 
 
 /* Kaufen/Download/Buttons-Schaltfläche HOVER */
 
-a.mp_button:hover,
-.mp_orders_invoice a.button:hover,
-a.mp_button:focus,
-.mp_orders_invoice a.button:focus,
-button.mp_button:hover,
-button.mp_button:focus {
-    background-color: #2f4f4fb8;
-    color: lightgray;
-    box-shadow: 6px 2px 4px #666;
+a.mp_button:hover, .mp_orders_invoice a.button:hover, a.mp_button:focus, .mp_orders_invoice a.button:focus, button.mp_button:hover, button.mp_button:focus {
+    background-color: #38c2bb;
+    color: #fff;
+    box-shadow: 3px 3px 6px #38c2bb;
+    border: 1px solid #fff;
 }
 
 
