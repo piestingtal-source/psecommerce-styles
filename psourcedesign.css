@@ -878,6 +878,7 @@ h4.mp_sub_title {
     color: #fff;
     border-radius: 5px;
     border:1px solid grey;
+    padding: 5px;
 }
 
 .mp_product_excerpt p {
@@ -898,6 +899,7 @@ h4.mp_sub_title {
     box-shadow: 2px 2px 4px darkslategrey;
     font-size: 1.1em;
     line-height: 1.0em;
+    padding: 5px;
 }
 
 a.mp_product_more_link:before {
@@ -997,7 +999,7 @@ a.mp_button:hover, .mp_orders_invoice a.button:hover, a.mp_button:focus, .mp_ord
 .mp_product_price-extended {
     font-weight: 700;
     text-decoration: underline;
-    text-shadow: 1px 1px 2px grey;
+    text-shadow: 1px 1px 2px #38c2bb;
 }
 
 .mp_product_price-sale~.mp_product_price-normal {
