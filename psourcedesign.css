@@ -966,8 +966,6 @@ button.mp_button {
     font-weight: 700;
     line-height: 1.5em;
     box-shadow: 2px 2px 4px #888;
-    left: 50%;
-    transform: translateX(-50%);
     max-width: 350px;
     min-width: 240px;
     justify-content: center;
@@ -1000,8 +998,6 @@ button.mp_button:focus {
     display: block;
     font-size: 22px;
     line-height: 1.5em;
-    left: 50%;
-    transform: translateX(-50%);
     max-width: 350px;
     min-width: 240px;
     justify-content: center;

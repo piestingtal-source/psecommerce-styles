@@ -1,120 +1,107 @@
-There are two methods to create custom designs for PSeCommerce stores:
+Eigene Designs für PSeCommerce erstellen
+Es gibt zwei Methoden, um benutzerdefinierte Designs für PSeCommerce-Shops zu erstellen:
 
-Basic Styles:
+Basis-Themes:
+Basis-Themes bestehen aus einer CSS-Datei und einem optionalen Bilderordner, der geladen wird
+und auf Shop-Seiten angewendet wird. So erstellst Du ein Basis-Theme:
+1. Erstelle eine CSS-Datei im Verzeichnis /wp-content/psecommerce-styles/ mit Deinen benutzerdefinierten CSS Styles. Es ist möglicherweise am einfachsten, unser default.css-Design zu kopieren und zu ändern. Standard CSS zum bearbeiten Downloaden
+2. Stelle sicher, dass Du den benutzerdefinierten Themen-Header mit dem Namen Deines Themes oben in der CSS-Datei hinzufügst:
 
-  Basic styles are comprised of a css file and an optional images folder that is loaded
-  and applied on store pages. To create a basic style:
-  
-  1. Create a css file in the /wp-content/psecommerce-styles/ directory with your custom styles. It
-      may be easiest to copy our default.css theme and modify it.
-  2. Make sure to add the custom theme header with your theme's name at the top of the css file:
-      /*
-      PSeCommerce Style: CUSTOMNAME
-      */
-      Including this header will cause your custom theme to show in the dropdown on the
-      Shop Einstellungen -> Presentation page so it may be selected.
-  3. You can also optionally create a subdirectory for your css images in the /wp-content/psecommerce-styles/ folder and
-      link to images within it with relative urls like "image-folder/my-image.jpg".
-      
+/*
+PSeCommerce Style: CUSTOMNAME
+*/
+Wenn Du diesen Header einfügst, wird Dein benutzerdefiniertes Theme in der Shoptheme Auswahl-Liste angezeigt
+Store Settings -> Präsentationsseite, damit sie ausgewählt werden kann.
+3. Optional kannst Du auch ein Unterverzeichnis für Deine CSS-Bilder im Ordner /wp-content/psecommerce-styles/ erstellen
+und verlinke Bilder darin mit relativen URLs wie „image-folder/my-image.jpg“.
 
-Advanced Themes:
+Erweiterte Themen:
+PSeCommerce verwendet benutzerdefinierte Beitragstypen, um seine Artikel anzuzeigen. Dies bedeutet, dass Du das gleiche WP-Theme-Template-System, mit dem Du vertraut bist verwenden kannst.
+Wir bieten lediglich eine angepasste Teilmenge der Vorlagenfunktionen, damit Du Dich nicht um Post-Metas kümmern musst. Vorlagenfunktionen sind vollständig dokumentiert und befinden sich in der Datei /psecommerce/includes/common/template-functions.php.
+>psecommerce-template-functions downloaden<
+Z.B. So erstellest Du eine benutzerdefinierte Produktseite:
+1. Erstelle eine Kopie der Vorlagendatei page.php in Deinem Themenverzeichnis und benenne sie in mp_product.php um
+2. mp_product.php muss die mp_* -Funktionen anstelle von the_content() verwenden. Eine Liste der für Produkte relevanten Funktionen findest Du in der template-functions.php.
+PSeCommerce durchsucht Deinen aktuellen Themenordner nach Vorlagendateien, die für das Speichern von Seiten spezifisch sind. Hier sind mögliche Dateinamen für Templatevorlagen in der Reihenfolge der Abfrage:
 
-  PSeCommerce uses custom post types to display it's products. This means that you can use
-  the same WP theme templating system you are familiar with. We simply provide a customized
-  subset of template functions so you don't have to worry about dealing with post meta. Template
-  functions are fully documented and can be found in the /psecommerce/includes/common/template-functions.php file.
+Einzelne Produktseite
+mp_product-PRODUCTNAME.php
+mp_product-PRODUCTID.php
+mp_product.php
+single-PRODUCT_POST_TYPE.php (Der Beitragstyp kann je nach den Einstellungen der Website „product“ oder „mp_product“ sein)
+single.php
+index.php
 
-  
-  E.g. to create a custom product page:
+Shopseite
+mp_store.php
+page.php
+index.php
 
-  1. Make a copy of the page.php template file in your theme directory and rename it mp_product.php
+Warenkorb/Kasse-Seite
+mp_checkout.php
+mp_cart.php
+page.php
+index.php
 
-  2. mp_product.php must use the mp_* functions instead of the_content(), see template-functions.php for a list of functions relevant to products.
+Bestellübersichtsseite
+mp_orderstatus.php
+page.php
+index.php
 
+Artikelarchivseite
+mp_productlist.php
+page.php
+index.php
 
-  PSeCommerce searches your current theme folder for template files specific to store pages. Here are possible
-  file names for store templates in order:
-  
-  Single Product Page
-    mp_product-PRODUCTNAME.php
-    mp_product-PRODUCTID.php
-    mp_product.php
-    single-PRODUCT_POST_TYPE.php (post type may be "product" or "mp_product" depending on your site's settings)
-    single.php
-    index.php
-    
-  Store Page
-    mp_store.php
-    page.php
-    index.php
-    
-  Cart/Checkout Page
-    mp_checkout.php
-    mp_cart.php
-    page.php
-    index.php
-    
-  Order Status Page
-    mp_orderstatus.php
-    page.php
-    index.php
-    
-  Product List Page
-    mp_productlist.php
-    page.php
-    index.php
-    
-  Product Category List Page
-    mp_category-CATEGORYSLUG.php
-    mp_category-CATEGORYID.php
-    mp_category.php
-    mp_taxonomy.php
-    taxonomy-product_category-CATEGORYSLUG.php
-    taxonomy-product_category.php    
-    mp_productlist.php
-    taxonomy.php
-    page.php
-    index.php
-    
-  Product Tag List Page
-    mp_tag-TAGSLUG.php
-    mp_tag-TAGID.php
-    mp_tag.php
-    mp_taxonomy.php
-    taxonomy-product_tag-TAGSLUG.php
-    taxonomy-product_tag.php    
-    mp_productlist.php
-    taxonomy.php
-    page.php
-    index.php
+Artikelkategorie Seite
+mp_category-CATEGORYSLUG.php
+mp_category-CATEGORYID.php
+mp_category.php
+mp_taxonomy.php
+taxonomy-product_category-CATEGORYSLUG.php
+taxonomy-product_category.php
+mp_productlist.php
+taxonomy.php
+page.php
+index.php
 
-  --------------------------------------------------
-  Global Listings - Will only work on main site/blog
-  --------------------------------------------------
-  Product List Page
-    mp_global_products.php
-    mp_productlist.php
-    page.php
-    index.php
-    
-  Product Category List Page
-    mp_global_category-CATEGORYSLUG.php
-    mp_global_category.php
-    mp_global_category_list.php
-    taxonomy-product_category-CATEGORYSLUG.php
-    taxonomy-product_category.php    
-    mp_productlist.php
-    taxonomy.php
-    page.php
-    index.php
-    
-  Product Tag List Page
-    mp_global_tag-TAGSLUG.php
-    mp_global_tag.php
-    mp_global_tag_list.php
-    taxonomy-product_tag-TAGSLUG.php
-    taxonomy-product_tag.php    
-    mp_productlist.php
-    taxonomy.php
-    page.php
-    index.php
+Artkel-Tag-Listenseite
+mp_tag-TAGSLUG.php
+mp_tag-TAGID.php
+mp_tag.php
+mp_taxonomy.php
+taxonomy-product_tag-TAGSLUG.php
+taxonomy-product_tag.php
+mp_productlist.php
+taxonomy.php
+page.php
+index.php
+
+Globale Einträge – Funktioniert nur auf der Hauptseite/im Blog
+Artikelarchivseite
+mp_global_products.php
+mp_productlist.php
+page.php
+index.php
+
+Artikelkategorielistenseite
+mp_global_category-CATEGORYSLUG.php
+mp_global_category.php
+mp_global_category_list.php
+taxonomy-product_category-CATEGORYSLUG.php
+taxonomy-product_category.php
+mp_productlist.php
+taxonomy.php
+page.php
+index.php
+
+Artikel-Tag-Listenseite
+mp_global_tag-TAGSLUG.php
+mp_global_tag.php
+mp_global_tag_list.php
+taxonomy-product_tag-TAGSLUG.php
+taxonomy-product_tag.php
+mp_productlist.php
+taxonomy.php
+page.php
+index.php
